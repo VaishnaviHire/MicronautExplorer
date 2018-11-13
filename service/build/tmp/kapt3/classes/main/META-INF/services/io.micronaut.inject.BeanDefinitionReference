@@ -1,0 +1,4 @@
+hello.world.$HelloControllerDefinitionClass
+hello.world.$ReceiveControllerDefinitionClass
+hello.world.$MessageControllerDefinitionClass
+hello.world.$RequestControllerDefinitionClass

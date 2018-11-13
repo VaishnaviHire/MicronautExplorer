@@ -1,0 +1,13 @@
+micronaut:
+    application:
+        name: hello-world
+
+    server:
+        port: 8080
+
+    security:
+# Whitelisting of IP is done using security feature of Micronaut
+      ipPatterns:
+        - 127.0.0.1
+        - 192.168.1.*
+

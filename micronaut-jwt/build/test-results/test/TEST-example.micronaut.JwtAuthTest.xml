@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="example.micronaut.JwtAuthTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-06-29T15:13:16" hostname="vaishnavis-mbp.vidmark.local" time="0.978">
+  <properties/>
+  <testcase name="Test JWT Authentication" classname="example.micronaut.JwtAuthTest" time="0.978"/>
+  <system-out><![CDATA[11:13:14.528 [Test worker] INFO  i.m.context.env.DefaultEnvironment - Established active environments: [test]
+11:13:14.544 [Test worker] INFO  i.m.context.env.DefaultEnvironment - Established active environments: [test]
+11:13:16.772 [pool-1-thread-1] DEBUG i.m.s.t.reader.HttpHeaderTokenReader - Looking for bearer token in Authorization header
+11:13:16.773 [pool-1-thread-1] DEBUG i.m.s.t.reader.HttpHeaderTokenReader - Looking for bearer token in Authorization header
+11:13:16.773 [pool-1-thread-1] DEBUG i.m.s.t.TokenAuthenticationFetcher - Unauthenticated request GET, /, no token found.
+11:13:16.775 [pool-1-thread-1] DEBUG i.m.security.filters.SecurityFilter - Failure to authenticate request. GET /.
+11:13:16.777 [pool-1-thread-1] DEBUG i.m.security.filters.SecurityFilter - Unauthorized request GET /. The rule provider io.micronaut.security.rules.SecuredAnnotationRule rejected the request.
+11:13:16.925 [nioEventLoopGroup-1-7] DEBUG i.m.s.t.reader.HttpHeaderTokenReader - Looking for bearer token in Authorization header
+11:13:16.925 [nioEventLoopGroup-1-7] DEBUG i.m.s.t.reader.HttpHeaderTokenReader - Looking for bearer token in Authorization header
+11:13:16.925 [nioEventLoopGroup-1-7] DEBUG i.m.s.t.TokenAuthenticationFetcher - Unauthenticated request POST, /login, no token found.
+11:13:16.925 [nioEventLoopGroup-1-7] DEBUG i.m.security.filters.SecurityFilter - Failure to authenticate request. POST /login.
+11:13:16.926 [nioEventLoopGroup-1-7] DEBUG i.m.security.filters.SecurityFilter - Authorized request POST /login. The rule provider io.micronaut.security.rules.SecuredAnnotationRule authorized the request.
+io.micronaut.security.authentication.UsernamePasswordCredentials@cefb4470
+11:13:16.976 [nioEventLoopGroup-1-7] DEBUG i.m.s.t.j.g.c.JWTClaimsSetGenerator - Setting expiration to 3600
+11:13:17.005 [nioEventLoopGroup-1-7] DEBUG i.m.s.t.j.g.c.JWTClaimsSetGenerator - Generated claim set: {"sub":"vaish","nbf":1530285196,"roles":[],"iss":"micronaut","exp":1530288796,"iat":1530285196}
+11:13:17.244 [nioEventLoopGroup-1-7] DEBUG i.m.s.t.j.g.c.JWTClaimsSetGenerator - Generated claim set: {"sub":"vaish","nbf":1530285197,"roles":[],"iss":"micronaut","iat":1530285197}
+11:13:17.351 [pool-1-thread-1] DEBUG i.m.s.t.reader.HttpHeaderTokenReader - Looking for bearer token in Authorization header
+11:13:17.351 [pool-1-thread-1] DEBUG i.m.s.t.TokenAuthenticationFetcher - Token eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWlzaCIsIm5iZiI6MTUzMDI4NTE5Niwicm9sZXMiOltdLCJpc3MiOiJtaWNyb25hdXQiLCJleHAiOjE1MzAyODg3OTYsImlhdCI6MTUzMDI4NTE5Nn0.EqzlIuyImA4as1RMmc4u0NHkpgkyuLXY6vCCoBx09Vs found in request GET /
+11:13:17.353 [pool-1-thread-1] DEBUG i.m.s.t.j.v.JwtTokenValidator - JWT is signed
+11:13:17.354 [pool-1-thread-1] DEBUG i.m.s.t.j.v.JwtTokenValidator - Using signature configuration: io.micronaut.security.token.jwt.signature.secret.SecretSignature@35a6c473
+11:13:17.363 [pool-1-thread-1] DEBUG i.m.security.filters.SecurityFilter - Attributes: sub=>vaish, nbf=>Fri Jun 29 11:13:16 EDT 2018, roles=>[], iss=>micronaut, exp=>Fri Jun 29 12:13:16 EDT 2018, iat=>Fri Jun 29 11:13:16 EDT 2018
+11:13:17.363 [pool-1-thread-1] DEBUG i.m.security.filters.SecurityFilter - Authorized request GET /. The rule provider io.micronaut.security.rules.SecuredAnnotationRule authorized the request.
+io.micronaut.http.client.FullNettyClientHttpResponse@7723a620
+11:13:17.375 [pool-1-thread-1] DEBUG i.m.s.t.reader.HttpHeaderTokenReader - Looking for bearer token in Authorization header
+11:13:17.375 [pool-1-thread-1] DEBUG i.m.s.t.TokenAuthenticationFetcher - Token eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWlzaCIsIm5iZiI6MTUzMDI4NTE5Niwicm9sZXMiOltdLCJpc3MiOiJtaWNyb25hdXQiLCJleHAiOjE1MzAyODg3OTYsImlhdCI6MTUzMDI4NTE5Nn0.EqzlIuyImA4as1RMmc4u0NHkpgkyuLXY6vCCoBx09Vs found in request GET /
+11:13:17.376 [pool-1-thread-1] DEBUG i.m.s.t.j.v.JwtTokenValidator - JWT is signed
+11:13:17.376 [pool-1-thread-1] DEBUG i.m.s.t.j.v.JwtTokenValidator - Using signature configuration: io.micronaut.security.token.jwt.signature.secret.SecretSignature@35a6c473
+11:13:17.377 [pool-1-thread-1] DEBUG i.m.security.filters.SecurityFilter - Attributes: sub=>vaish, nbf=>Fri Jun 29 11:13:16 EDT 2018, roles=>[], iss=>micronaut, exp=>Fri Jun 29 12:13:16 EDT 2018, iat=>Fri Jun 29 11:13:16 EDT 2018
+11:13:17.377 [pool-1-thread-1] DEBUG i.m.security.filters.SecurityFilter - Authorized request GET /. The rule provider io.micronaut.security.rules.SecuredAnnotationRule authorized the request.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

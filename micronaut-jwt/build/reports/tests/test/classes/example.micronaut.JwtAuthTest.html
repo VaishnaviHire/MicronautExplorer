@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class example.micronaut.JwtAuthTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class example.micronaut.JwtAuthTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/example.micronaut.html">example.micronaut</a> &gt; JwtAuthTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.978s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Test JWT Authentication</td>
+<td class="success">0.978s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>11:13:14.528 [Test worker] INFO  i.m.context.env.DefaultEnvironment - Established active environments: [test]
+11:13:14.544 [Test worker] INFO  i.m.context.env.DefaultEnvironment - Established active environments: [test]
+11:13:16.772 [pool-1-thread-1] DEBUG i.m.s.t.reader.HttpHeaderTokenReader - Looking for bearer token in Authorization header
+11:13:16.773 [pool-1-thread-1] DEBUG i.m.s.t.reader.HttpHeaderTokenReader - Looking for bearer token in Authorization header
+11:13:16.773 [pool-1-thread-1] DEBUG i.m.s.t.TokenAuthenticationFetcher - Unauthenticated request GET, /, no token found.
+11:13:16.775 [pool-1-thread-1] DEBUG i.m.security.filters.SecurityFilter - Failure to authenticate request. GET /.
+11:13:16.777 [pool-1-thread-1] DEBUG i.m.security.filters.SecurityFilter - Unauthorized request GET /. The rule provider io.micronaut.security.rules.SecuredAnnotationRule rejected the request.
+11:13:16.925 [nioEventLoopGroup-1-7] DEBUG i.m.s.t.reader.HttpHeaderTokenReader - Looking for bearer token in Authorization header
+11:13:16.925 [nioEventLoopGroup-1-7] DEBUG i.m.s.t.reader.HttpHeaderTokenReader - Looking for bearer token in Authorization header
+11:13:16.925 [nioEventLoopGroup-1-7] DEBUG i.m.s.t.TokenAuthenticationFetcher - Unauthenticated request POST, /login, no token found.
+11:13:16.925 [nioEventLoopGroup-1-7] DEBUG i.m.security.filters.SecurityFilter - Failure to authenticate request. POST /login.
+11:13:16.926 [nioEventLoopGroup-1-7] DEBUG i.m.security.filters.SecurityFilter - Authorized request POST /login. The rule provider io.micronaut.security.rules.SecuredAnnotationRule authorized the request.
+io.micronaut.security.authentication.UsernamePasswordCredentials@cefb4470
+11:13:16.976 [nioEventLoopGroup-1-7] DEBUG i.m.s.t.j.g.c.JWTClaimsSetGenerator - Setting expiration to 3600
+11:13:17.005 [nioEventLoopGroup-1-7] DEBUG i.m.s.t.j.g.c.JWTClaimsSetGenerator - Generated claim set: {&quot;sub&quot;:&quot;vaish&quot;,&quot;nbf&quot;:1530285196,&quot;roles&quot;:[],&quot;iss&quot;:&quot;micronaut&quot;,&quot;exp&quot;:1530288796,&quot;iat&quot;:1530285196}
+11:13:17.244 [nioEventLoopGroup-1-7] DEBUG i.m.s.t.j.g.c.JWTClaimsSetGenerator - Generated claim set: {&quot;sub&quot;:&quot;vaish&quot;,&quot;nbf&quot;:1530285197,&quot;roles&quot;:[],&quot;iss&quot;:&quot;micronaut&quot;,&quot;iat&quot;:1530285197}
+11:13:17.351 [pool-1-thread-1] DEBUG i.m.s.t.reader.HttpHeaderTokenReader - Looking for bearer token in Authorization header
+11:13:17.351 [pool-1-thread-1] DEBUG i.m.s.t.TokenAuthenticationFetcher - Token eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWlzaCIsIm5iZiI6MTUzMDI4NTE5Niwicm9sZXMiOltdLCJpc3MiOiJtaWNyb25hdXQiLCJleHAiOjE1MzAyODg3OTYsImlhdCI6MTUzMDI4NTE5Nn0.EqzlIuyImA4as1RMmc4u0NHkpgkyuLXY6vCCoBx09Vs found in request GET /
+11:13:17.353 [pool-1-thread-1] DEBUG i.m.s.t.j.v.JwtTokenValidator - JWT is signed
+11:13:17.354 [pool-1-thread-1] DEBUG i.m.s.t.j.v.JwtTokenValidator - Using signature configuration: io.micronaut.security.token.jwt.signature.secret.SecretSignature@35a6c473
+11:13:17.363 [pool-1-thread-1] DEBUG i.m.security.filters.SecurityFilter - Attributes: sub=&gt;vaish, nbf=&gt;Fri Jun 29 11:13:16 EDT 2018, roles=&gt;[], iss=&gt;micronaut, exp=&gt;Fri Jun 29 12:13:16 EDT 2018, iat=&gt;Fri Jun 29 11:13:16 EDT 2018
+11:13:17.363 [pool-1-thread-1] DEBUG i.m.security.filters.SecurityFilter - Authorized request GET /. The rule provider io.micronaut.security.rules.SecuredAnnotationRule authorized the request.
+io.micronaut.http.client.FullNettyClientHttpResponse@7723a620
+11:13:17.375 [pool-1-thread-1] DEBUG i.m.s.t.reader.HttpHeaderTokenReader - Looking for bearer token in Authorization header
+11:13:17.375 [pool-1-thread-1] DEBUG i.m.s.t.TokenAuthenticationFetcher - Token eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWlzaCIsIm5iZiI6MTUzMDI4NTE5Niwicm9sZXMiOltdLCJpc3MiOiJtaWNyb25hdXQiLCJleHAiOjE1MzAyODg3OTYsImlhdCI6MTUzMDI4NTE5Nn0.EqzlIuyImA4as1RMmc4u0NHkpgkyuLXY6vCCoBx09Vs found in request GET /
+11:13:17.376 [pool-1-thread-1] DEBUG i.m.s.t.j.v.JwtTokenValidator - JWT is signed
+11:13:17.376 [pool-1-thread-1] DEBUG i.m.s.t.j.v.JwtTokenValidator - Using signature configuration: io.micronaut.security.token.jwt.signature.secret.SecretSignature@35a6c473
+11:13:17.377 [pool-1-thread-1] DEBUG i.m.security.filters.SecurityFilter - Attributes: sub=&gt;vaish, nbf=&gt;Fri Jun 29 11:13:16 EDT 2018, roles=&gt;[], iss=&gt;micronaut, exp=&gt;Fri Jun 29 12:13:16 EDT 2018, iat=&gt;Fri Jun 29 11:13:16 EDT 2018
+11:13:17.377 [pool-1-thread-1] DEBUG i.m.security.filters.SecurityFilter - Authorized request GET /. The rule provider io.micronaut.security.rules.SecuredAnnotationRule authorized the request.
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 4.7</a> at Jun 29, 2018 11:13:17 AM</p>
+</div>
+</div>
+</body>
+</html>

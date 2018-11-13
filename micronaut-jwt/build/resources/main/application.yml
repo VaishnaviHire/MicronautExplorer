@@ -1,0 +1,17 @@
+micronaut:
+  security:
+    enabled: true
+    endpoints:
+      login:
+        enabled: true
+      oauth:
+        enabled: true
+    token:
+      jwt:
+        enabled: true
+        signatures:
+          secret:
+            generator:
+              secret: 'cGxlYXNlQ2hhbmdlVGhpc1NlY3JldEZvckFOZXdPbmU='
+              base64: true
+          #    jwsAlgorithm: HS256
